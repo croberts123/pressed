@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php bloginfo(''); ?></title>
+	<title><?php bloginfo('name'); ?></title>
 	<script src="http://use.edgefonts.net/josefin-slab.js"></script>
 	<script src="http://use.edgefonts.net/merriweather.js"></script>
 	<link rel="stylesheet" href="http://localhost/wp-content/themes/pressed/style.css"/>
 </head>
 	<body>
 		<header>
-			<h1>Pressed and Squeezed</h1>
+			<h1><?php bloginfo('name'); ?></h1>
 			<nav>
 				<ul>
 					<li><a href="#">Home</a></li>
@@ -17,7 +17,7 @@
 			</nav>
 		</header>
 		<section>
-			<img src="http://localhost/wp-content/themes/pressed/images/hero.jpg" />
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/hero.jpg" />
 			<section>
 				<p>Pressed and Squeezed is a full-service WordPress shop. We create custom themes and CMSes for our clients.</p>
 				<p>We also make <em>smoothies</em> on the side.</p>
