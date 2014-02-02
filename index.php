@@ -4,7 +4,7 @@
 	<title><?php bloginfo('name'); ?></title>
 	<script src="http://use.edgefonts.net/josefin-slab.js"></script>
 	<script src="http://use.edgefonts.net/merriweather.js"></script>
-	<link rel="stylesheet" href="http://localhost/wp-content/themes/pressed/style.css"/>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheets_url'); ?>" />
 </head>
 	<body>
 		<header>
@@ -18,10 +18,14 @@
 		</header>
 		<section>
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/hero.jpg" />
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<section>
-				<p>Pressed and Squeezed is a full-service WordPress shop. We create custom themes and CMSes for our clients.</p>
-				<p>We also make <em>smoothies</em> on the side.</p>
+				<!-- <p>Pressed and Squeezed is a full-service WordPress shop. We create custom themes and CMSes for our clients.</p>
+				<p>We also make <em>smoothies</em> on the side.</p> -->
 			</section>
+		<?php endwhile; else: ?>
+			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif; ?>	
 		</section>
 		<footer>
 			<h1>Contact Us</h1>
