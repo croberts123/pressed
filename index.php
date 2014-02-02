@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php bloginfo('name'); ?></title>
+	<title><?php bloginfo(''); ?></title>
 	<script src="http://use.edgefonts.net/josefin-slab.js"></script>
 	<script src="http://use.edgefonts.net/merriweather.js"></script>
 	<link rel="stylesheet" href="http://localhost/wp-content/themes/pressed/style.css"/>
